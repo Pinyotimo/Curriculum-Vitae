@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Otieno Oduor - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+            color: white;
+            padding: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #bfdbfe;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 35px;
+        }
+        
+        h2 {
+            color: #1e293b;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #2563eb;
+        }
+        
+        .summary {
+            color: #475569;
+            text-align: justify;
+        }
+        
+        .education-box {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .education-box h3 {
+            color: #1e293b;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        
+        .education-box .institution {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .education-box .details {
+            color: #64748b;
+            font-size: 0.9em;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-card {
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .skill-card.blue {
+            background: #eff6ff;
+            border-color: #2563eb;
+        }
+        
+        .skill-card.green {
+            background: #f0fdf4;
+            border-color: #16a34a;
+        }
+        
+        .skill-card.purple {
+            background: #faf5ff;
+            border-color: #9333ea;
+        }
+        
+        .skill-card.red {
+            background: #fef2f2;
+            border-color: #dc2626;
+        }
+        
+        .skill-card h3 {
+            font-size: 1em;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+        
+        .skill-card p {
+            font-size: 0.85em;
+            color: #475569;
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .cert-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .cert-item .cert-name {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 3px;
+        }
+        
+        .cert-item .cert-org {
+            font-size: 0.85em;
+            color: #64748b;
+        }
+        
+        .project {
+            border-left: 4px solid;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .project.blue { border-color: #2563eb; }
+        .project.indigo { border-color: #4f46e5; }
+        .project.green { border-color: #16a34a; }
+        .project.purple { border-color: #9333ea; }
+        .project.red { border-color: #dc2626; }
+        
+        .project h3 {
+            font-size: 1.1em;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+        
+        .project p {
+            font-size: 0.9em;
+            color: #475569;
+        }
+        
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .strength-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #475569;
+        }
+        
+        .strength-item::before {
+            content: "●";
+            color: #2563eb;
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 0.9em;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Stephen Otieno Oduor</h1>
+            <div class="subtitle">Computer Science Student </div>
+            <div class="contact-info">
+                <div class="contact-item">📍 Nairobi, Kenya</div>
+                <div class="contact-item">✉️ steveotieno2012005@gmail.com</div>
+                <div class="contact-item">📱 0769493697</div>
+                <div class="contact-item">💼 Stephen Oduor</div>
+                <div class="contact-item">💻 github.com/Pinyotimo</div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Professional Summary -->
+            <section>
+                <h2>Professional Summary</h2>
+                <p class="summary">
+                    Computer Science undergraduate with strong skills in C/C++ programming, Git workflows, and troubleshooting, now expanding into full-stack web development through training at eMobilis. Certified in networking, cybersecurity, AI, and business IT, with hands-on experience in HTML, CSS, Python, Django, SQL, Bootstrap, Git/GitHub, and MariaDB. Passionate about building secure, scalable, and well-documented systems that bridge technical depth with real-world impact.
+                </p>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2>Education</h2>
+                <div class="education-box">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <div class="institution">The Co-operative University of Kenya</div>
+                    <div class="details">Admission No: C024/404845/2024</div>
+                    <div class="details">Expected Graduation: December 2028</div>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section>
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card blue">
+                        <h3>💻 Programming</h3>
+                        <p>Advanced C and C++ (OOP, inheritance, encapsulation, abstraction)</p>
+                    </div>
+                    <div class="skill-card green">
+                        <h3>🌐 Web Development</h3>
+                        <p>HTML, CSS, Bootstrap, Python, Django, SQL, MariaDB</p>
+                    </div>
+                    <div class="skill-card purple">
+                        <h3>📦 Version Control</h3>
+                        <p>Git branch management, GitHub collaboration, conflict resolution</p>
+                    </div>
+                    <div class="skill-card red">
+                        <h3>🛡️ Cybersecurity</h3>
+                        <p>Threat mitigation, digital safety, misinformation awareness</p>
+                    </div>
+                </div>
+                <div class="skills-grid" style="margin-top: 15px;">
+                    <div class="skill-card blue">
+                        <h3>🔌 Networking</h3>
+                        <p>IP addressing, routing, switching, Huawei & Cisco fundamentals</p>
+                    </div>
+                    <div class="skill-card green">
+                        <h3>🤖 AI Foundations</h3>
+                        <p>Modern AI concepts, ethics, and applications</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section>
+                <h2>Certifications & Professional Development</h2>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <div class="cert-name">🏆 Networking Essentials</div>
+                        <div class="cert-org">Cisco via ICT Authority (Nov 2025)</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">🏆 HCIA 811</div>
+                        <div class="cert-org">Huawei Certified ICT Associate</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">🏆 Cybersecurity Fundamentals</div>
+                        <div class="cert-org">IBM (2025)</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">🏆 Internet Security</div>
+                        <div class="cert-org">Internet Society (Nov 2025)</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">🏆 Introduction to Modern AI</div>
+                        <div class="cert-org">Cisco via AALTI (Nov 2025)</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">🏆 Web Development Bootcamp</div>
+                        <div class="cert-org">eMobilis Training Institute (2025)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2>Projects & Experience</h2>
+                <div class="project blue">
+                    <h3>Student Management System (C)</h3>
+                    <p>Developed a comprehensive system for managing student records with file handling and data structures</p>
+                </div>
+                <div class="project indigo">
+                    <h3>Bank Account Management System (C++)</h3>
+                    <p>Implemented classes with inheritance and polymorphism to simulate banking operations</p>
+                </div>
+                <div class="project green">
+                    <h3>Group GitHub Projects</h3>
+                    <p>Managed repositories, resolved conflicts, and streamlined collaboration workflows</p>
+                </div>
+                <div class="project purple">
+                    <h3>Django Web Server Project</h3>
+                    <p>Configured environments, optimized templates, and deployed locally</p>
+                </div>
+                <div class="project indigo">
+                    <h3>Responsive Web Pages (HTML/CSS/Bootstrap)</h3>
+                    <p>Built responsive layouts and styled components during bootcamp and Codecademy training</p>
+                </div>
+                <div class="project red">
+                    <h3>SQL & MariaDB Integration</h3>
+                    <p>Designed and queried relational databases for web applications</p>
+                </div>
+            </section>
+
+            <!-- Key Strengths -->
+            <section>
+                <h2>Key Strengths</h2>
+                <div class="strengths-grid">
+                    <div class="strength-item">Analytical problem-solving and troubleshooting</div>
+                    <div class="strength-item">Professional communication and documentation</div>
+                    <div class="strength-item">Ethical, security-conscious approach</div>
+                    <div class="strength-item">Resilient and collaborative mindset</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            References available upon request
+        </div>
+    </div>
+</body>
+</html>
